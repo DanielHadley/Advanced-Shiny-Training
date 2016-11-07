@@ -21,8 +21,8 @@ function(input, output){
   
   output$twoColumnPlot <- renderPlot({
     
-    
-    qplot(x = data()[,1], y = data()[,2])
+    input$run
+    qplot(x = isolate(data()[,1]), y = isolate(data()[,2]))
     
   })
   

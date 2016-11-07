@@ -7,6 +7,12 @@ library(shiny)
 
 shinyUI(fluidPage(
   
+  fluidRow(
+    
+    actionButton("run", "Run it!")
+    
+  ),
+  
   fluidRow(column(width = 3, 
                   selectInput("data", "Choose Data", 
                               choices = c("Iris", "Airquality", "Mtcars"))
